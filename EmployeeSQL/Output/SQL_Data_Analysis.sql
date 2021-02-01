@@ -12,6 +12,9 @@ Select e.emp_no,
 
 -- List first name, last name, and
 -- hire date for employees who were hired in 1986.
+SELECT first_name, last_name, hire_date
+FROM employees
+WHERE hire_date like '%1986'
 
 
 -- List the manager of each department with the
