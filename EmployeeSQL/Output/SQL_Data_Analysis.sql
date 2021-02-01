@@ -20,6 +20,16 @@ WHERE hire_date like '%1986'
 -- List the manager of each department with the
 -- following information: department number, department name,
 -- the manager's employee number, last name, first name.
+SELECT d.dept_no,
+	d.dept_name,
+	dm.emp_no,
+	e.last_name,
+	e.first_name
+	FROM departments d
+	INNER JOIN dept_manager dm ON
+	d.dept_no = dm.dept_no
+	INNER JOIN employees e ON
+	dm.emp_no = e.emp_no;
 
 
 -- List the department of each employee with the following information:
